@@ -34,7 +34,7 @@ Button btnConvert,btnClear;
                etCel.setText("");
                break;
            case R.id.convert:
-               if(etFah.getText().toString().equals("")){
+               if(!etCel.getText().toString().equals("")){
                    //convert from celsius to Fahrenheit
                    double cel= Double.parseDouble(etCel.getText().toString());
                    double fah= cel*(9.0/5.0)+32;
@@ -43,7 +43,7 @@ Button btnConvert,btnClear;
                    String strDouble = String.format("%.2f", result);
                    etFah.setText(strDouble);
 
-               }else if(etCel.getText().toString().equals("")){
+               }else if(!etFah.getText().toString().equals("")){
 
                    //convert from Fahrenheit to celsius
                    double fah= Double.parseDouble(etFah.getText().toString());
